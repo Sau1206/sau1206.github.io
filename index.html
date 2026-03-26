@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Bonita</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+  <h1>🛒 Mi Tienda Bonita</h1>
+  <input type="text" id="buscador" placeholder="🔍 Buscar productos..." oninput="buscarProductos()">
+  <button onclick="toggleCarrito()">🛒 Carrito (<span id="contadorCarrito">0</span>)</button>
+</header>
+
+<section id="categorias">
+  <button onclick="filtrarCategoria('todo')">Todo</button>
+  <button onclick="filtrarCategoria('bebidas')">Bebidas 🥤</button>
+  <button onclick="filtrarCategoria('botanas')">Botanas 🍿</button>
+  <button onclick="filtrarCategoria('dulces')">Dulces 🍫</button>
+</section>
+
+<main id="productos" class="grid"></main>
+
+<!-- DETALLE PRODUCTO -->
+<div id="detalle">
+  <div id="detalleCont">
+    <button id="cerrarDetalle" onclick="cerrarDetalle()">❌ Cerrar</button>
+    <img id="detalleImg" src="">
+    <h2 id="detalleNombre"></h2>
+    <p id="detallePrecio"></p>
+    <p id="detalleDesc"></p>
+    <button onclick="agregarDesdeDetalle()">➕ Agregar al carrito</button>
+
+    <h3>Recomendados ❤️</h3>
+    <div id="recomendadosDetalle" class="grid-mini"></div>
+  </div>
+</div>
+
+<!-- CARRITO -->
+<div id="carritoPanel">
+  <h2>Carrito 🛒</h2>
+  <ul id="lista"></ul>
+  <p id="total">Total: $0</p>
+  <button onclick="enviarWhats()">📩 Enviar pedido WhatsApp</button>
+  <button onclick="cerrarCarrito()">Cerrar</button>
+</div>
+
+<script src="tienda.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
